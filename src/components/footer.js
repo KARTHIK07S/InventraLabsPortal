@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <p>© 2025 Inventra Labs. All rights reserved.</p>
       <nav>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#careers">Careers</a>
+        <a href="/footer">Privacy Policy</a> | <a href="footer">Terms</a> | <a href="#careers">Careers</a>
       </nav>
     </footer>
   );

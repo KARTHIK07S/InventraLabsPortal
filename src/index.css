@@ -1,3 +1,5 @@
+
+
 /* General Styles */
 body {
   margin: 0;
@@ -25,11 +27,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:  #ffffff;
-  padding: 25px 50px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  flex: none;
+  padding: 25px 20px; /* ✅ reduced horizontal padding */
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
+
 
 .logo {
   height: 80px;
@@ -48,17 +50,20 @@ nav a {
   text-align: center;
   padding: 100px 20px;
   background: linear-gradient(to right, #e6f0ff, #f4faff);
+  flex-wrap: wrap;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 /* About */
 .about {
   padding: 60px 20px;
   text-align: center;
+  
 }
 
 .about img {
@@ -103,7 +108,6 @@ nav a {
   display: flex;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap;
 }
 
 .product-card {
@@ -121,30 +125,54 @@ nav a {
 
 /* Careers */
 .careers {
-  padding: 60px 20px;
+  width: 100%;
+  padding: 210px 20px;
   text-align: center;
   background-color: #e6f0ff;
 }
 
-/* Contact */
+/* contact */
 .contact {
-  padding: 60px 20px;
+  padding: 120px 20px;
+  background-color: #e6f0ff;
   text-align: center;
-}
-
-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  margin: 0 auto;
+  align-items: center;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+@media (min-width: 768px) {
+  .contact {
+    padding: 190px 140px; /* restore for tablets and desktops */
+  }
 }
+
+.contact-details {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
 
 /* Footer */
 .footer {
@@ -152,15 +180,38 @@ input, textarea {
   color: white;
   text-align: center;
   padding: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 .footer a {
   color: #a0c4ff;
-  margin: 0 10px;
+  margin: 5px 10px;
   text-decoration: none;
+  display: inline-block;
 }
 
 
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+}
+
+
+/* src/styles/VisitorCounter.css */
+.visitor-counter {
+  font-size: 0.2rem;
+  color: #092024;
+  font-weight: 800;
+  margin-top: 15px;
+  text-align: right;
+}
 
 
 

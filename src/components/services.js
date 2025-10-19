@@ -17,7 +17,7 @@ function Services() {
             <span className="icon">{s.icon}</span>
             <h3>{s.title}</h3>
             <p>{s.desc}</p>
-            <a href="#">Learn More</a>
+            <a href="/contact">Contact</a>
           </div>
         ))}
       </div>
